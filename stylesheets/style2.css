@@ -1,0 +1,218 @@
+p {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 23px;
+    padding: 10px;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: #0099FF;
+    font-weight: 400;
+    overflow-y: auto ! important;
+    overflow-x: hidden ! important;
+    /*background-size: 100% 100%;*/
+    background-size:   cover;                      /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;            /* optionally, center the image */
+    margin: 30px 0 0 0; 
+}
+
+h1 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 26.3999996185303px;
+}
+
+h1.title {
+    color: #606060;
+    padding-left: 20px;
+    text-align: left;
+    /*text-align: center;*/
+}
+
+.important {
+    background-color: #FFCC00;
+}
+
+.float_center {
+    float: right;
+    position: relative;
+    left: -50%; /* or right 50% */
+    text-align: left;
+}
+
+.float_center > .child {
+    position: relative;
+    left: 50%;
+}
+
+.float_right {
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+#nav {
+    width: 30px
+    float: left;
+    margin-right: 10px;
+    padding-left: 20px;
+    background: #DDD;
+}
+
+ul {
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+li {
+    display: inline;
+}
+
+.ab {
+    background-color: transparent;
+}
+
+#voronoi {
+    text-align: center;
+    margin: 0 auto;
+}
+
+#container {
+    height: 400px;
+    /*background: #DDD;*/
+}
+
+#sujucontainer {
+    height: 800px;
+    margin: 10px 10px 10px 10px;
+    overflow: auto;
+}
+
+.helvetica {
+    font-family: Helvetica;
+    font-size: 16px;
+}
+
+.green-big {
+    color: green;
+}
+
+/* ============================================================
+  SECTIONS
+============================================================ */
+section.module:last-child {
+  margin-bottom: 0;
+}
+section.module h2 {
+  padding-left: 10px;
+  margin-bottom: 0px;
+  font-family: "Roboto Slab", serif;
+  font-size: 30px;
+}
+section.module h3 {
+  padding-left: 10px;
+  margin-bottom: 10px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 40px;
+}
+section.module p {
+  margin-bottom: 0px;
+  font-size: 16px;
+  font-weight: 300;
+}
+section.module p:last-child {
+  margin-bottom: 0;
+}
+section.module.contentlong {
+  height: 1200px;
+  /*height: 100%;*/
+  background-image: url("../images/back2.jpg");
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 10px 10px;
+}
+section.module.content {
+  height: 500px;
+  background-image: url("../images/back2.jpg");
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 10px 10px;
+}
+section.module.parallax {
+  height: 500px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 20px 20px;
+}
+section.module.parallax h1 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 40px;
+  line-height: 150px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+section.module.parallax-1 {
+  height: 500px;
+  width: auto;
+  background-image: url("../images/1.jpg");
+  /*margin: -30px;*/
+}
+section.module.parallax-2 {
+  height: 500px;
+  width:100%;
+  background-image: url("../images/2.jpg");
+}
+section.module.parallax-3 {
+  height: 500px;
+  background-image: url("../images/3.jpg");
+}
+section.module.parallax-s1 {
+  background-image: url("../images/suju.jpg");
+  margin: -30px;
+}
+
+@media all and (min-width: 600px) {
+  section.module h2 {
+    font-size: 42px;
+  }
+  section.module p {
+    font-size: 21px;
+    font-weight: 500;
+  }
+  section.module.parallax h1 {
+    font-size: 96px;
+  }
+}
+@media all and (min-width: 960px) {
+  section.module.parallax h1 {
+    font-size: 160px;
+  }
+}
+
