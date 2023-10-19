@@ -1,0 +1,79 @@
+
+
+[data-theme="light"] {
+  /* Default (light) theme */
+  --bg: #fff;
+  --accent-bg: #f5f7ff;
+  --text: #212121;
+  --text-light: #585858;
+  --border: #898ea4;
+  --accent: #0d47a1;
+  --code: #d81b60;
+  --preformatted: #444;
+  --marked: #ffdd33;
+  --disabled: #efefef;
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #212121;
+  --accent-bg: #2b2b2b;
+  --text: #dcdcdc;
+  --text-light: #ababab;
+  --accent: #ffb300;
+  --code: #f06292;
+  --preformatted: #ccc;
+  --disabled: #111;
+}
+/* Add a bit of transparency so light media isn't so glaring in dark mode */
+[data-theme="dark"] img,
+[data-theme="dark"] video {
+  opacity: 0.8;
+}
+
+:root[data-theme="light"] {
+	--background-color: #fff;
+	--color: #444;
+	--heading-color: #222;
+	--link-color: #3273dc;
+	--link-visited-color: #193c75;
+	--code-background-color: #c7c7c7;
+	--theme-slider-initial-transform: 0px;
+	--light-theme-indicator-color: #ffcf00;
+	--dark-theme-indicator-color: var(--color);
+}
+
+:root[data-theme="dark"] {
+	--background-color: #444;
+	--color: #fff;
+	--heading-color: #f1f1f1;
+	--link-color: #de9906;
+	--link-visited-color: #966807;
+	--code-background-color: #252525;
+	--theme-slider-initial-transform: translateX(24px);
+	--light-theme-indicator-color: var(--color);
+	--dark-theme-indicator-color: #ffcf00;
+}
+
+.button1 {
+	border-radius: 0px;
+	padding: 8px;
+	border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 0px 2px;
+    float: right;
+	}
+	
+.footer {
+   width:100%;
+   
+   background:red;
+   /*height:61px; position:relative;*/
+   position:relative;
+   /*position: fixed;*/
+   bottom: -200px;;
+}

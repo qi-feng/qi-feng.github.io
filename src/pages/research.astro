@@ -1,0 +1,52 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+import { format } from 'date-fns'
+
+// Use Astro.glob() to fetch all posts, and then sort them by date.
+const posts = (await Astro.glob('./news/*.{md,mdx}')).sort(
+	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
+);
+
+let title = "Research"
+let description = "Qi Feng"
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header title={title} description={description} />
+		<main>
+			<h3>High-Energy Gamma-Ray Astrophysics</h3>
+			<ul>
+			  
+				<li> <b> Active galactic nuclei: </b> They are bright regions around supermassive black holes where particles are accelerated to high energies. They dominate the extragalactic gamma-ray and radio sky. 
+				    We study the particle acceleration and radiation mechanisms in these sources. </li>
+				<li> <b> The next-generation gamma-ray telescopes: </b> We built a novel <a href="http://cta-psct.physics.ucla.edu">prototype Schwarzschild-Couder Telescope</a> 
+				    for the upcoming <a href="https://www.cta-observatory.org/">Cherenkov Telescope Array Observatory</a>. 
+				    We are in an exciting phase of exploring the power of this innovative telescope design and making it production ready. </li>
+				<li> <b> Advanced data analysis: </b> We use various statistical techniques including machine learning. We are working on tools that can serve the research community. </li>
+			</ul>
+			<h3>Multi-Messenger Astrophysics</h3>
+			<ul>
+				<li><b> Searching for neutrino sources: </b> Active galactic nuclei remain one of the most promising candidate source classes for the highest-energy astrophysical neutrinos observed 
+				    by the <a href="https://icecube.wisc.edu/"> IceCube Neutrino Observatory</a>.  <br>
+				    We organize multi-wavelength campaigns to investigate active galactic nuclei that are potentially associated with astrophysical neutrinos. 
+				    The identification of any neutrino source would ultimately address, at least partially, the long-standing cosmic-ray origin mystery.</li>
+			</ul>
+			<h3>Astroparticle Physics</h3>
+			<ul>
+				<li><b> Axion-Like Particles: </b> They are hypothetical particles beyond the Standard Model and candidate for dark matter. 
+				        We use gamma-ray observations of active galactic nuclei to provide competitive constraints on the mass of axion-like particles and their coupling strength with photons. </li>
+			</ul>
+			
+			<h4>A list of publications can be found on <a href="https://ui.adsabs.harvard.edu/user/libraries/gJOoEX0VTzCJ3b_kag1fJw">the SAO/NASA ADS</a>. </h4>
+		</main>
+		<Footer />
+	</body>
+</html>

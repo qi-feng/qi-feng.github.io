@@ -1,0 +1,23 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+import ThemeIcon from './ThemeIcon.astro';
+const { title, description } = Astro.props.frontmatter || Astro.props;
+---
+
+<header>
+	<nav>
+		<HeaderLink href="/">Home</HeaderLink>
+		<HeaderLink href="/research">Research</HeaderLink>
+		<HeaderLink href="/teaching">Teaching</HeaderLink>
+		<HeaderLink href="/about">About</HeaderLink>
+		<HeaderLink href="/news">News</HeaderLink>
+		<HeaderLink href="/CV_2023Oct.pdf">CV</HeaderLink>
+		<ThemeIcon id="theme-toggle" />
+	</nav>
+	<h1>
+		{title}
+	</h1>
+	{description &&
+	<p>{description}</p>
+	}
+</header>

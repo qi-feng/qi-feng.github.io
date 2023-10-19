@@ -1,0 +1,32 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<main>
+			<h5> 
+			Opportunities are available for postdoctoral researchers and graduate/undergraduate students at the University of Utah. <br>
+			Email me at <a href="mailto:qi.feng@utah.edu">qi.feng@utah.edu</a>. 
+			</h5>
+			
+			<h5>We focus on <a href="/research">research</a> in gamma-ray and multi-messenger astrophysics:</h5>
+			<ul>
+			    <li>We search for extreme particle accelerators in the Universe through data analysis with many tools, including machine learning. </li>
+			    <li>We use multi-messenger data from many ground-based and space telescopes. </li>
+			    <li>We operate telescopes. This is <a href="http://veritas.sao.arizona.edu/">VERITAS</a>: <img alt="VERITAS" src="/1920px-Vts_array_2023.jpg" /> </li>
+				<li>We build telescopes! Can you find the <a href="http://cta-psct.physics.ucla.edu">prototype Schwarzschild-Couder Telescope</a> in the picture above? (hint: it's red!).</li>
+				<li>Check out the <a href="/news">news</a> about our group.</li>
+			</ul>
+		</main>
+		<Footer />
+	</body>
+</html>
