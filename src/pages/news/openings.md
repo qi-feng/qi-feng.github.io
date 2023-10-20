@@ -7,10 +7,10 @@ pubDate: "Oct 20, 2023"
 ---
 
 <h3>Postdoctoral research positions: </h3>
-We currently have one opening for a postdoctoral researcher. See <a href="/UtahGRMMAPostdocJobAd.pdf">here</a> for details about this position. 
+We currently have one opening for a postdoctoral researcher, starting as early as February 2024. See <a href="/UtahGRMMAPostdocJobAd.pdf">here</a> for details about this position. 
 
 <h3>Ph.D. student positions:</h3>
-We currently have two openings for Ph.D. students. 
+We currently have two openings for Ph.D. students, starting as early as January 2024. 
 
 
 
