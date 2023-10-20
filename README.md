@@ -1,16 +1,8 @@
-# astro-simple
+# Qi Feng's group website built with astro-simple
 
 A blog starter template with [Astro](https://github.com/withastro/astro) and [Simple.css](https://github.com/kevquirk/simple.css). Based on the [Astro blog example](https://github.com/withastro/astro/tree/main/examples/blog).
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/lkhrs/astro-simple/tree/main/)
-
-Features:
-
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and OpenGraph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
 
 ## 🚀 Project Structure
 
