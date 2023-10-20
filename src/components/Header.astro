@@ -2,6 +2,7 @@
 import HeaderLink from "./HeaderLink.astro";
 import ThemeIcon from './ThemeIcon.astro';
 const { title, description } = Astro.props.frontmatter || Astro.props;
+import { SITE_TITLE, SITE_SUBTITLE, SITE_DESCRIPTION } from '../config';
 ---
 
 <header>
@@ -19,5 +20,7 @@ const { title, description } = Astro.props.frontmatter || Astro.props;
 	</h1>
 	{description &&
 	<p>{description}</p>
+	<!--p>{SITE_SUBTITLE}<br>
+	{SITE_DESCRIPTION}</p-->
 	}
 </header>

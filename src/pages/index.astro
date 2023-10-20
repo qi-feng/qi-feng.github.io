@@ -2,7 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+import { SITE_TITLE, SITE_SUBTITLE, SITE_DESCRIPTION } from '../config';
 ---
 
 <!DOCTYPE html>
@@ -11,8 +11,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
-		<Header title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<Header title={SITE_TITLE} description={SITE_SUBTITLE} />
 		<main>
+		<h4>Welcome!</h4>
 			<h5> 
 			Opportunities are available for postdoctoral researchers and graduate/undergraduate students at the University of Utah. <br>
 			Email me at <a href="mailto:qi.feng@utah.edu">qi.feng@utah.edu</a>. 

@@ -6,7 +6,7 @@ updatedDate: "Oct 15 2023"
 heroImage: "/QiFengPic.jpg"
 ---
 
-I will be an assistant professor at the Department of Physics and Astronomy at the University of Utah in January 2024. 
+I will be an assistant professor in the Department of Physics & Astronomy at the University of Utah in January 2024. 
 My research interests are in high-energy gamma-ray and multi-messenger astrophysics, 
 and the development of new astroparticle physics instrumentation and data analysis. 
 
