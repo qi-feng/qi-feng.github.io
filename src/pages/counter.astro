@@ -19,22 +19,94 @@ let description = "written by ChatGPT"
 <head>
   <title>Visitor Counter</title>
   <script>
-    function getVisitorCount() {
-      if (typeof(Storage) !== "undefined") {
-        if (localStorage.visitorCount) {
-          localStorage.visitorCount = Number(localStorage.visitorCount)+1;
-        } else {
-          localStorage.visitorCount = 1;
-        }
-        document.getElementById("counter").innerHTML = "You are visitor number " + localStorage.visitorCount;
-      } else {
-        document.getElementById("counter").innerHTML = "Sorry, your browser does not support web storage...";
+    var count = 0;
+
+    function countUniqueVisitors() {
+      var visitorId = localStorage.getItem('visitorId');
+      if (!visitorId) {
+        visitorId = Math.random().toString(36).substring(2) + (new Date()).getTime().toString(36);
+        localStorage.setItem('visitorId', visitorId);
+      }
+
+      var uniqueVisitors = JSON.parse(localStorage.getItem('uniqueVisitors')) || {};
+      uniqueVisitors[visitorId] = true;
+      localStorage.setItem('uniqueVisitors', JSON.stringify(uniqueVisitors));
+
+      document.getElementById("uniqueVisitorCount").innerHTML = "Number of unique visitors: " + Object.keys(uniqueVisitors).length;
+    }
+
+    // # of visits from the same user
+    function isLocalStorageSupported(){
+      if (typeof Storage !== "undefined")
+        //local storage is supported
+        return true;
+      else{
+        //local storage is not supported
+        return false;
       }
     }
+
+    function doesVariableExist(x){
+      if (localStorage[x]) {
+        return true;
+      }else{
+        return false;
+      }
+    }
+
+    function createStorageVariable(x, value){
+      localStorage[x] = value
+      return localStorage[x]
+    }
+
+    if (isLocalStorageSupported){
+      if(doesVariableExist('test')){
+        localStorage.test = Number(localStorage.test) + 1
+      }else{
+        localStorage.test = 1
+      }
+      console.log(localStorage.test)
+    }
+    // localStorage.clear()
+    if (typeof Storage !== "undefined") {
+      //Local storage is supported
+      if (localStorage.visitcount) {
+        // variable exists for this site they've been here before so do things
+        document.getElementById("result").innerHTML =
+          "Welcome back, you've been here " +
+          localStorage.visitcount +
+          " times before.";
+        localStorage.visitcount = Number(localStorage.visitcount) + 1; //update variable for existing users
+      } else {
+        // variable not found they haven't been here before
+        localStorage.visitcount = 1; //set initial value of variable for this site and then do things for first time
+        document.getElementById("result").innerHTML =
+          "This is your first time here! Welcome.";
+      }
+    } else {
+      // their browser doesn't support local storage so let them know or just do nothing
+      alert(
+        "Sorry, your browser does not support web storage.  Changes will not be saved"
+      );
+      document.getElementById("result").innerHTML =
+        "Sorry, your browser does not support web storage...";
+    }
+
+    // console.log("localstorage visit count now: " + localStorage.visitcount);
+
+    // localStorage.clear();
+
+
   </script>
 </head>
-<body onload="getVisitorCount()">
-  <h1>Visitor Counter</h1>
-  <p id="counter">You are visitor number 0</p>
+<body onload="countUniqueVisitors()">
+  <h2>Visitor Counter</h2>
+  <div class="container">
+  <p id="uniqueVisitorCount">You are visitor number 0</p>
+  </div>
+  <div class="container">
+    <p id="result"></p>
+  </div>
+
 </body>
 </html>
