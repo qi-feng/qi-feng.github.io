@@ -79,7 +79,7 @@
 }
 
 .circular--portrait-nowrap { position: relative; width: 200px; height: 200px; overflow: hidden; border-radius: 50%; margin: 50px;  left:0px; top:0px}
-.circular--portrait { position: relative; width: 200px; height: 200px; overflow: hidden; border-radius: 50%; float: left; margin: 50px; margin-left: 0px;  max-width: 50%; max-height: 50%;}
+.circular--portrait { position: relative; width: 200px; height: 200px; overflow: hidden; border-radius: 50%; float: left; margin: 50px; margin-left: 0px;  max-width: 50%; max-height: 50vw;}
 .circular--portrait img { width: 100%; height: auto; }
 .nowrap {overflow:hidden; }
 
