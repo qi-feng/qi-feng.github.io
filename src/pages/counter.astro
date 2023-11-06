@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Visitor Counter</title>
+  <script>
+    function getVisitorCount() {
+      if (typeof(Storage) !== "undefined") {
+        if (localStorage.visitorCount) {
+          localStorage.visitorCount = Number(localStorage.visitorCount)+1;
+        } else {
+          localStorage.visitorCount = 1;
+        }
+        document.getElementById("counter").innerHTML = "You are visitor number " + localStorage.visitorCount;
+      } else {
+        document.getElementById("counter").innerHTML = "Sorry, your browser does not support web storage...";
+      }
+    }
+  </script>
+</head>
+<body onload="getVisitorCount()">
+  <h1>Visitor Counter</h1>
+  <p id="counter"></p>
+</body>
+</html>
