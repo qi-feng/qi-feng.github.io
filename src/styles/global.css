@@ -123,6 +123,7 @@
         width:600px;
         height:auto;
         display: block;
+        flex-direction: column;
     }
 
     .separator1 {
@@ -131,6 +132,7 @@
         width:800px;
         height:auto;
         display: block;
+        flex-direction: column;
     }
 
     .separator2 {
@@ -139,6 +141,7 @@
         width:350px;
         height:auto;
         display: block;
+        flex-direction: column;
     }
 }
 
