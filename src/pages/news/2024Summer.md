@@ -12,6 +12,9 @@ Welcome Chloe Dufeu (Bard College) and Dylan Mendoza (University of Northern Col
 <h3>First-Year Ph.D. Students:</h3>
 Congrats to Simon Filbert and Rumman Neshat for getting the Swigart Fellowship and joining us for Summer research! 
 
+<br>
+<br>
+
 
 <img
     src="/20240610_SummerGroupMeeting.jpg"
