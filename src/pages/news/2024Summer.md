@@ -15,11 +15,21 @@ Congrats to Simon Filbert and Rumman Neshat for getting the Swigart Fellowship a
 <br>
 <br>
 
+<img
+    src="/2024SummerLunch.jpg"
+    alt=""
+/>
+<figcaption>
+    A group lunch in late July 2024. From left to right: Julianna Bayless, Dylan Mendoza, Chloe Dufeu, Anne Duerr, Joshua Bartkoske, Wayne Springer, Dave Kieda, Qi Feng, and Simon Filbert. 
+</figcaption>
+
+<hr>
 
 <img
     src="/20240610_SummerGroupMeeting.jpg"
     alt=""
 />
 <figcaption>
-    A group meeting in the Summer of 2024
+    A group meeting in the Summer of 2024. From left to right: Chloe Dufeu, Julianna Bayless, Dylan Mendoza, Rumman Neshat, Simon Filbert, Anne Duerr, and Joshua Bartkoske. 
 </figcaption>
+
