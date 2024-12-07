@@ -1,0 +1,105 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+import { format } from 'date-fns'
+
+// Use Astro.glob() to fetch all posts, and then sort them by date.
+const posts = (await Astro.glob('./news/*.{md,mdx}')).sort(
+	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
+);
+
+let title = "Group Members"
+let description = "Qi Feng"
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header title={title} description={description} />
+		<main>
+			<h3>Current Group Members</h3>
+			<ul>
+			  <div class="container">
+    			  <div class="portrait2">
+                    <img src="/QiFengPic.jpg">
+                  </div>
+                <div class="separator3">
+                  <div class="text">
+                    <b> Qi Feng </b> <br>
+                     PI <br>
+                     <a href="mailto:qi.feng@utah.edu">qi.feng@utah.edu</a>
+                  </div>
+                </div>
+                </div>
+
+			  <div class="container">
+    			  <div class="portrait2">
+                    <img src="/Ashwani-Pandey.png">
+                  </div>
+                <div class="separator3">
+                  <div class="text">
+                    <b> Ashwani Pandey </b> <br>
+                     Postdoc <br>
+                     <a href="mailto:u6059187@utah.edu">u6059187@utah.edu</a>
+                  </div>
+                </div>
+                </div>
+
+                <div class="container">
+    			  <div class="portrait2">
+                    <img src="/SimonFilbert.jpg">
+                  </div>
+                <div class="separator3">
+                  <div class="text">
+                    <b> Simon Filbert </b> <br>
+                     Graduate Student <br>
+                     <a href="mailto:u1477296@utah.edu">u1477296@utah.edu</a>
+                  </div>
+                </div>
+                </div>
+
+                <div class="container">
+    			  <div class="portrait2">
+                    <img src="/blank-profile.webp">
+                  </div>
+                <div class="separator3">
+                  <div class="text">
+                    <b> Kennedie Wilding </b> <br>
+                     Undergraduate Student <br>
+                  </div>
+                </div>
+                </div>
+
+                <div class="container">
+    			  <div class="portrait2">
+                    <img src="/blank-profile.webp">
+                  </div>
+                <div class="separator3">
+                  <div class="text">
+                    <b> Eleanor Young </b> <br>
+                     Undergraduate Student <br>
+                  </div>
+                </div>
+                </div>
+
+
+			</ul>
+
+			<h3>Previous Group Members</h3>
+			<ul>
+                <h4> Graduate Students </h4>
+                   <li> Rumman Neshat - 2024 Summer/Fall research rotation </li>
+                <h4> Undergraduate Students </h4>
+                   <li> Chloe Dufeu - 2024 Summer REU  </li>
+                   <li> Dylan Mendoza - 2024 Summer REU </li>
+
+			</ul>
+		</main>
+		<Footer />
+	</body>
+</html>

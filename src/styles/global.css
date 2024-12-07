@@ -83,6 +83,9 @@
 .circular--portrait img { width: 100%; height: auto; }
 .nowrap {overflow:hidden; }
 
+
+
+
 .container {
   display: flex;
   align-items: center;
@@ -113,6 +116,19 @@
     width:700px;
     height:auto;
     display: block;
+}
+
+.portrait2 { position: relative; width: 150px; height: 150px; overflow: hidden; border-radius: 0%; float: left; margin: 10px; margin-left: 0px;  margin-right: 10px;  }
+.portrait2 img { width: 100%; height: auto; }
+
+.separator3 {
+    max-width: 100%;
+    max-height: 100%;
+    width:500px;
+    height:auto;
+    display: block;
+    position: relative;
+    top:-10px;
 }
 
 @media (max-width: 800px) {
