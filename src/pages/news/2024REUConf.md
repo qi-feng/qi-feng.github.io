@@ -13,4 +13,8 @@ Chloe Dufeu (Bard College) presented her work on candidate neutrino-emiting Seyf
 
 <br>
 
+Congratulations to both! 
+
+<br>
+
 
