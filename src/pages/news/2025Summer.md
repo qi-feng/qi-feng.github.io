@@ -8,7 +8,7 @@ pubDate: "June 1, 2025"
 
 <h3>REU students: </h3>
 Welcome Rachel Freeman (University of Florida) to our 2025 Research Experiences for Undergrads (REU) program! 
-Rachel is working on a 
+
 
 <br>
 
