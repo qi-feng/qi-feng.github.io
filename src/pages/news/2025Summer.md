@@ -10,10 +10,6 @@ pubDate: "June 1, 2025"
 Welcome Rachel Freeman (University of Florida) to our 2025 Research Experiences for Undergrads (REU) program! 
 Rachel is working on a 
 
-<h3>First-Year Ph.D. Students:</h3>
-Congrats to Michael Martin for getting the Swigart Fellowship and joining us for Summer research! 
-
-<br>
 <br>
 
 <img
@@ -25,6 +21,12 @@ Congrats to Michael Martin for getting the Swigart Fellowship and joining us for
 </figcaption>
 
 <hr>
+
+<h3>First-Year Ph.D. Students:</h3>
+Congrats to Michael Martin for getting the Swigart Fellowship and joining us for Summer research! 
+
+<br>
+
 
 <img
     src="/Michael at lil black mtn square.jpg"
