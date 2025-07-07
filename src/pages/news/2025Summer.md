@@ -2,7 +2,7 @@
 layout: "../../layouts/BlogPost.astro"
 title: "Welcome 2024 Summer Students!"
 description: "Welcome two students to our group for 2025 Summer research projects!"
-pubDate: "June 20, 2025"
+pubDate: "June 1, 2025"
 #heroImage: "/1920px-Vts_array_2023.jpg"
 ---
 
