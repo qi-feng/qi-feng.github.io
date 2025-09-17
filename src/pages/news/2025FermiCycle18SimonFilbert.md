@@ -1,6 +1,6 @@
 ---
 layout: "../../layouts/BlogPost.astro"
-title: "Congrats to Simon Filbert for a successful NASA Fermi Guest Investigator proposal"
+title: "Congrats to Simon Filbert for leading a successful NASA Fermi Guest Investigator proposal"
 description: "Congrats to Simon Filbert!"
 pubDate: "Aug 10, 2025"
 heroImage: "/fermi-in-orbit.webp"
