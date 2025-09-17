@@ -8,8 +8,8 @@ pubDate: "Aug 10, 2025"
 
 Simon Filbert led a NASA proposal to the Fermi Cycle 18 Guest Investigator program as the Science PI. 
 This proposal was accepted by NASA and will support Simon's thesis work for a year with an award of about $80k. 
-See the [a list of the selected programs](https://fermi.gsfc.nasa.gov/ssc/proposals/cycle18/Cycle18ApprovedPrograms.pdf)
-at the [Fermi Guest Investigator Program Cycle 18 page](https://fermi.gsfc.nasa.gov/ssc/proposals/cycle18/)
+See the [list of the selected programs](https://fermi.gsfc.nasa.gov/ssc/proposals/cycle18/Cycle18ApprovedPrograms.pdf)
+on the [Fermi Guest Investigator Program Cycle 18 page](https://fermi.gsfc.nasa.gov/ssc/proposals/cycle18/)
 
 <br>
 
