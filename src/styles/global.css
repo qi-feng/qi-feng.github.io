@@ -121,6 +121,21 @@
 .portrait2 { position: relative; width: 150px; height: 150px; overflow: hidden; border-radius: 0%; float: left; margin: 10px; margin-left: 0px;  margin-right: 10px;  }
 .portrait2 img { width: 100%; height: auto; }
 
+.portrait2--zoom img {
+  width: 100%;
+  height: 100%;          /* ensure it fills the 150x150 box */
+  object-fit: cover;     /* crop instead of shrinking */
+  object-position: 50% 50%; /* tweak focus point */
+  transform: scale(1.25); /* zoom amount */
+}
+
+.portrait2--zoom2 img {
+  width: 100%;
+  height: 100%;          /* ensure it fills the 150x150 box */
+  object-fit: cover;     /* crop instead of shrinking */
+  object-position: 50% 25%; /* tweak focus point */
+  transform: scale(1.4); /* zoom amount */
+}
 .separator3 {
     max-width: 100%;
     max-height: 100%;
