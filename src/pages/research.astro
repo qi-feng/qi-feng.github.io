@@ -3,15 +3,16 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
-import { format } from 'date-fns'
+import { format } from 'date-fns';
 
-// Use Astro.glob() to fetch all posts, and then sort them by date.
-const posts = (await Astro.glob('./news/*.{md,mdx}')).sort(
-	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
+const posts = Object.values(
+  import.meta.glob('./news/*.{md,mdx}', { eager: true })
+).sort(
+  (a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
 );
 
-let title = "Research"
-let description = "Qi Feng"
+let title = "Research";
+let description = "Qi Feng";
 ---
 
 <!DOCTYPE html>
@@ -117,12 +118,27 @@ let description = "Qi Feng"
 
 			</ul>
 			
-			<h4>A list of publications can be found on <a href="https://ui.adsabs.harvard.edu/public-libraries/gJOoEX0VTzCJ3b_kag1fJw">the SAO/NASA ADS</a>. </h4>
+			<h3>A list of publications can be found on <a href="https://ui.adsabs.harvard.edu/public-libraries/gJOoEX0VTzCJ3b_kag1fJw">the SAO/NASA ADS</a>. </h3>
 
-			Undergraduate students at Utah can check out research opportunities for: <a https://www.physics.utah.edu/undergraduate-program/undergraduate-research/> the Spring/Fall </a>
-			 and the Summer programs like <a https://www.physics.utah.edu/surf-opportunities/> SURF </a> and <a https://our.utah.edu/research-scholarship-opportunities/spur/> SPUR </a>. <br>
+			<h3>Research Opportunities </h3>
 
-			Undergraduate students from other institutions <a https://www.physics.utah.edu/reu-opportunities/> REU opportunities </a>.
+    <p>
+      Undergraduate students at Utah can check out research opportunities for
+      <a href="https://www.physics.utah.edu/undergraduate-program/undergraduate-research/">the Spring/Fall</a>,
+      also check out <a href="https://our.utah.edu/research-scholarship-opportunities/urop/">UROP</a>,
+      and Summer programs like
+      <a href="https://www.physics.utah.edu/surf-opportunities/">SURF</a>
+      and
+      <a href="https://our.utah.edu/research-scholarship-opportunities/spur/">SPUR</a>.
+    </p>
+
+    <p>
+      Undergraduate students from other institutions can explore
+      <a href="https://www.physics.utah.edu/reu-opportunities/">REU opportunities</a>.
+    </p>
+
+    <p> First-year graduate students will go through research rotations in different groups with the help of an advisory committee. Reach out to me if you are considering a research rotation
+    or a Summer Swigart research project in our group.
 
 		</main>
 		<Footer />

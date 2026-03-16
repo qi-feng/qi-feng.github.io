@@ -7,27 +7,47 @@ import { SITE_TITLE, SITE_SUBTITLE, SITE_DESCRIPTION } from '../config';
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header title={SITE_TITLE} description={SITE_SUBTITLE} />
-		<main>
-		<h2>Welcome!</h2>
-			<p>
-			Opportunities are available for graduate/undergraduate students at the University of Utah.
-			Email me at <a href="mailto:qi.feng@utah.edu">qi.feng@utah.edu</a>. 
-			</p>
-			
-			<p><strong>My <a href="/group">group</a> focuses on <a href="/research">research</a> in gamma-ray and multi-messenger astrophysics:</strong></p>
-			<ul>
-			    <li>We search for extreme particle accelerators in the Universe through data analysis with many tools, including machine learning. </li>
-			    <li>We use multi-messenger data from many ground-based and space telescopes. </li>
-			    <li>We operate telescopes. This is <a href="http://veritas.sao.arizona.edu/">VERITAS</a>: <img alt="VERITAS" src="/1920px-Vts_array_2023.jpg" /> </li>
-				<li>We build telescopes! Can you find the <a href="http://cta-psct.physics.ucla.edu">prototype Schwarzschild-Couder Telescope</a> in the picture above? (hint: it's red!).</li>
-				<li>Check out the <a href="/news">news</a> about our group.</li>
-			</ul>
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header title={SITE_TITLE} description={SITE_SUBTITLE} />
+    <main id="main-content">
+      <h2>Welcome</h2>
+
+      <p>
+        Opportunities are available for graduate and undergraduate students at the University of Utah.
+        Email me at <a href="mailto:qi.feng@utah.edu">qi.feng@utah.edu</a>.
+      </p>
+
+      <p>
+        <strong>My <a href="/group">group</a> focuses on <a href="/research">research</a> in gamma-ray and multi-messenger astrophysics:</strong>
+      </p>
+
+      <ul>
+        <li>We search for extreme particle accelerators in the Universe through data analysis with many tools, including machine learning.</li>
+        <li>We use multi-messenger data from many ground-based and space telescopes.</li>
+        <li>
+          We operate telescopes, including
+          <a href="http://veritas.sao.arizona.edu/">VERITAS</a>.
+        </li>
+        <li>
+          We build telescopes, including the
+          <a href="http://cta-psct.physics.ucla.edu">prototype Schwarzschild-Couder Telescope</a>.
+        </li>
+        <li>Check out the <a href="/news">news</a> about our group.</li>
+      </ul>
+
+      <figure>
+        <img
+          src="/1920px-Vts_array_2023.jpg"
+          alt="The VERITAS telescope array at night."
+        />
+        <figcaption>
+          The VERITAS telescope array.
+        </figcaption>
+      </figure>
+    </main>
+    <Footer />
+  </body>
 </html>

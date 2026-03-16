@@ -11,10 +11,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^1.1.1",
-    "@astrojs/rss": "^3.0.0",
-    "@astrojs/sitemap": "^3.0.0",
-    "astro": "^3.2.3",
+    "@astrojs/mdx": "^5.0.1",
+    "@astrojs/rss": "^4.0.17",
+    "@astrojs/sitemap": "^3.7.1",
+    "accessible-astro-components": "^5.2.0",
+    "astro": "^6.0.5",
     "astro-color-scheme": "^1.1.2",
     "date-fns": "^2.30.0",
     "simpledotcss": "^2.2.1"

@@ -1,27 +1,24 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
-import ThemeIcon from './ThemeIcon.astro';
+import ThemeIcon from "./ThemeIcon.astro";
+
 const { title, description } = Astro.props.frontmatter || Astro.props;
-import { SITE_TITLE, SITE_SUBTITLE, SITE_DESCRIPTION } from '../config';
 ---
 
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 <header>
-	<nav>
-		<HeaderLink href="/">Home</HeaderLink>
-		<HeaderLink href="/research">Research</HeaderLink>
-		<HeaderLink href="/teaching">Teaching</HeaderLink>
-		<HeaderLink href="/group">Group</HeaderLink>
-		<HeaderLink href="/about">Bio</HeaderLink>
-		<HeaderLink href="/news">News</HeaderLink>
-		<HeaderLink href="/CV.pdf">CV</HeaderLink>
-		<ThemeIcon id="theme-toggle" />
-	</nav>
-	<h1>
-		{title}
-	</h1>
-	{description &&
-	<p>{description}</p>
-	<!--p>{SITE_SUBTITLE}<br>
-	{SITE_DESCRIPTION}</p-->
-	}
+  <nav aria-label="Primary">
+    <HeaderLink href="/">Home</HeaderLink>
+    <HeaderLink href="/research">Research</HeaderLink>
+    <HeaderLink href="/teaching">Teaching</HeaderLink>
+    <HeaderLink href="/group">Group</HeaderLink>
+    <HeaderLink href="/about">Bio</HeaderLink>
+    <HeaderLink href="/news">News</HeaderLink>
+    <HeaderLink href="/CV.pdf">CV</HeaderLink>
+    <ThemeIcon />
+  </nav>
+
+  <h1>{title}</h1>
+  {description && <p>{description}</p>}
 </header>
