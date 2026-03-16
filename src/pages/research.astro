@@ -3,13 +3,6 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
-import { format } from 'date-fns';
-
-const posts = Object.values(
-  import.meta.glob('./news/*.{md,mdx}', { eager: true })
-).sort(
-  (a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
-);
 
 let title = "Research";
 let description = "Qi Feng";
@@ -22,124 +15,168 @@ let description = "Qi Feng";
 	</head>
 	<body>
 		<Header title={title} description={description} />
-		<main>
+		<main id="main-content">
 			<h3>High-Energy Gamma-Ray Astrophysics</h3>
 			<ul>
-			  <div class="container">
-                  <div class="text">
-                    <li><b> Active galactic nuclei: </b> They are bright regions around supermassive black holes where particles are accelerated to high energies.
-				    They dominate the extragalactic gamma-ray and radio sky.
-				    We study the particle acceleration and radiation mechanisms in these sources.</li>
-                  </div>
-                  <div class="separator">
-                  <a href="https://en.wikipedia.org/wiki/Blazar">
-                    <img src="/blazar_cartoon.png">
-                  </a>
-                  </div>
-              </div>
-              <br>
-              <div class="container">
-                <div class="text">
-				<li> <b> The next-generation gamma-ray telescopes: </b> We built a novel <a href="http://cta-psct.physics.ucla.edu">prototype Schwarzschild-Couder Telescope</a> 
-				    for the upcoming <a href="https://www.cta-observatory.org/">Cherenkov Telescope Array Observatory</a>.
-				    We are in an exciting phase of exploring the power of this innovative telescope design and making it production ready.
-				    Check out this <a href="/jupiter_ring2focus_collapse_p1.gif">time-lapse</a> of a mirror alignment execution of the prototype Schwarzschild-Couder Telescope.
+				<li>
+					<div class="container">
+						<div class="text">
+							<b>Active galactic nuclei:</b> They are bright regions around supermassive black holes where particles are accelerated to high energies.
+							They dominate the extragalactic gamma-ray and radio sky.
+							We study the particle acceleration and radiation mechanisms in these sources.
+						</div>
+						<div class="separator">
+							<a
+								href="https://en.wikipedia.org/wiki/Blazar"
+								aria-label="Learn more about blazars on Wikipedia"
+							>
+								<img
+									src="/blazar_cartoon.png"
+									alt="Illustration of a blazar with a relativistic jet emerging from a supermassive black hole."
+								/>
+							</a>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="container">
+						<div class="text">
+							<b>The next-generation gamma-ray telescopes:</b> We built a novel
+							<a href="http://cta-psct.physics.ucla.edu">prototype Schwarzschild-Couder Telescope</a>
+							for the upcoming
+							<a href="https://www.cta-observatory.org/">Cherenkov Telescope Array Observatory</a>.
+							We are in an exciting phase of exploring the power of this innovative telescope design and making it production ready.
+							Check out this <a href="/jupiter_ring2focus_collapse_p1.gif">time-lapse</a> of a mirror alignment execution of the prototype Schwarzschild-Couder Telescope.
+						</div>
+						<div class="separator1">
+							<a
+								href="http://cta-psct.physics.ucla.edu"
+								aria-label="Visit the prototype Schwarzschild-Couder Telescope project website"
+							>
+								<img
+									src="/pSCT_inauguration-24.jpeg"
+									alt="The prototype Schwarzschild-Couder Telescope at its inauguration."
+								/>
+							</a>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="container">
+						<div class="text">
+							<b>Advanced data analysis:</b> We use various statistical techniques including machine learning.
+							We are working on tools that can serve the research community
+							(see e.g., <a href="https://github.com/ctlearn-project/ctlearn">CTLearn</a>).
+						</div>
+						<div class="separator2">
+							<a
+								href="https://github.com/ctlearn-project/ctlearn"
+								aria-label="Visit the CTLearn GitHub repository"
+							>
+								<img
+									src="/CTLearnTextCTinBox_WhiteBkgd.png"
+									alt="CTLearn project logo."
+								/>
+							</a>
+						</div>
+					</div>
+				</li>
+			</ul>
+
+            <h3>Multi-Messenger Astrophysics</h3>
+            <ul>
+                <li>
+                    <b>Searching for neutrino sources:</b> Active galactic nuclei remain one of the most promising candidate source classes for the highest-energy astrophysical neutrinos observed
+                    by the <a href="https://icecube.wisc.edu/">IceCube Neutrino Observatory</a>.
+                    We organize multi-wavelength campaigns to investigate active galactic nuclei that are potentially associated with astrophysical neutrinos.
+                    The identification of any neutrino source would ultimately address, at least partially, the long-standing cosmic-ray origin mystery.
                 </li>
-				</div>
-                <div class="separator1">
-                  <a href="http://cta-psct.physics.ucla.edu">
-                    <img
-                        src="/pSCT_inauguration-24.jpeg"
-                        alt=""
-                    />
-                  </a>
-                </div>
-              </div>
-              <br>
+            </ul>
 
-			  <div class="container">
-                  <div class="text">
-				    <li> <b> Advanced data analysis: </b> We use various statistical techniques including machine learning. We are working on tools that can serve the research community (see e.g., <a href="https://github.com/ctlearn-project/ctlearn">CTLearn</a>). </li>
-			      </div>
-                  <div class="separator2">
-                  <a href="https://github.com/ctlearn-project/ctlearn">
-                    <img src="/CTLearnTextCTinBox_WhiteBkgd.png">
-                  </a>
-                  </div>
+            <figure class="mma-right">
+                <img
+                    src="/MMA.jpeg"
+                    alt="Illustration representing multi-messenger astrophysics observations across different cosmic messengers."
+                />
+                <figcaption>
+                    <span class="photo-credit">
+                        Image credit:
+                        <a href="https://astroparticle-physics.desy.de/research/theory/multi_messenger_astrophysics/index_eng.html">
+                            DESY/Zeuthen
+                        </a>
+                    </span>
+                </figcaption>
+            </figure>
 
-              </div>
-			</ul>
-			<h3>Multi-Messenger Astrophysics</h3>
-			<ul>
-                    <li><b> Searching for neutrino sources: </b> Active galactic nuclei remain one of the most promising candidate source classes for the highest-energy astrophysical neutrinos observed
-                        by the <a href="https://icecube.wisc.edu/"> IceCube Neutrino Observatory</a>.  <br>
-                        We organize multi-wavelength campaigns to investigate active galactic nuclei that are potentially associated with astrophysical neutrinos.
-                        The identification of any neutrino source would ultimately address, at least partially, the long-standing cosmic-ray origin mystery.
-                    </li>
-                    <br>
-                        <img src="/MMA.jpeg">
-                        <figcaption>
-                            <span class="photo-credit">Image credit: <a href="https://astroparticle-physics.desy.de/research/theory/multi_messenger_astrophysics/index_eng.html">
-                                                                DESY/Zeuthen</a>
-                            </span>
-                        </figcaption>
-			</ul>
 			<h3>Astroparticle Physics</h3>
 			<ul>
-			<div class="container">
-                  <div class="text">
-                    <li><b> Axion-Like Particles: </b> They are hypothetical particles beyond the Standard Model and candidate for dark matter.
-                            We use gamma-ray observations of active galactic nuclei to provide competitive constraints on the mass of axion-like particles and their coupling strength with photons. </li>
-			      </div>
-                <div class="separator1">
-                    <img
-                        src="/ALP_Cartoon.jpeg"
-                        alt=""
-                    />
-                    <figcaption>
-                        <span class="photo-credit">Image credit: <a href="https://phys.org/news/2016-04-dark-axion-like-particles.html">
-                                                            Aurore Simonnet/Sonoma State University and NASA/NOAA/GSFC/Suomi NPP/VIIRS/Norman Kuring</a>
-                        </span>
-                    </figcaption>
-                </div>
-              </div>
+				<li>
+					<div class="container">
+						<div class="text">
+							<b>Axion-Like Particles:</b> They are hypothetical particles beyond the Standard Model and candidate for dark matter.
+							We use gamma-ray observations of active galactic nuclei to provide competitive constraints on the mass of axion-like particles and their coupling strength with photons.
+						</div>
+						<div class="separator1">
+							<figure>
+								<img
+									src="/ALP_Cartoon.jpeg"
+									alt="Illustration of axion-like particle effects in an astrophysical context."
+								/>
+								<figcaption>
+									<span class="photo-credit">
+										Image credit:
+										<a href="https://phys.org/news/2016-04-dark-axion-like-particles.html">
+											Aurore Simonnet/Sonoma State University and NASA/NOAA/GSFC/Suomi NPP/VIIRS/Norman Kuring
+										</a>
+									</span>
+								</figcaption>
+							</figure>
+						</div>
+					</div>
+				</li>
 
-              <div class="container">
-                  <div class="text">
-                    <li><b> Ultraheavy Dark Matter: </b> These are hypothetical dark matter candidates with masses above 10 TeV.
-                            We're working with external collaborators to explore ways to search for intense bursts of gamma ray photons
-                            potentially associated with the annihilation or decay of these ultraheavy dark matter particles.
-                            Such events would light up half of the atmosphere for at least 40 ns and produce a distinct signature.
-                            A similar search focused on primordial black holes has been done about 20 years ago by <a href="https://arxiv.org/abs/astro-ph/0501199">SGARFACE</a>. </li>
-			      </div>
-
-                </div>
-              </div>
-
+				<li>
+					<div class="container">
+						<div class="text">
+							<b>Ultraheavy Dark Matter:</b> These are hypothetical dark matter candidates with masses above 10 TeV.
+							We're working with external collaborators to explore ways to search for intense bursts of gamma ray photons
+							potentially associated with the annihilation or decay of these ultraheavy dark matter particles.
+							Such events would light up half of the atmosphere for at least 40 ns and produce a distinct signature.
+							A similar search focused on primordial black holes has been done about 20 years ago by
+							<a href="https://arxiv.org/abs/astro-ph/0501199">SGARFACE</a>.
+						</div>
+					</div>
+				</li>
 			</ul>
-			
-			<h3>A list of publications can be found on <a href="https://ui.adsabs.harvard.edu/public-libraries/gJOoEX0VTzCJ3b_kag1fJw">the SAO/NASA ADS</a>. </h3>
 
-			<h3>Research Opportunities </h3>
+			<h3>
+				A list of publications can be found on
+				<a href="https://ui.adsabs.harvard.edu/public-libraries/gJOoEX0VTzCJ3b_kag1fJw">the SAO/NASA ADS</a>.
+			</h3>
 
-    <p>
-      Undergraduate students at Utah can check out research opportunities for
-      <a href="https://www.physics.utah.edu/undergraduate-program/undergraduate-research/">the Spring/Fall</a>,
-      also check out <a href="https://our.utah.edu/research-scholarship-opportunities/urop/">UROP</a>,
-      and Summer programs like
-      <a href="https://www.physics.utah.edu/surf-opportunities/">SURF</a>
-      and
-      <a href="https://our.utah.edu/research-scholarship-opportunities/spur/">SPUR</a>.
-    </p>
+			<h3>Research Opportunities</h3>
 
-    <p>
-      Undergraduate students from other institutions can explore
-      <a href="https://www.physics.utah.edu/reu-opportunities/">REU opportunities</a>.
-    </p>
+			<p>
+				Undergraduate students at Utah can check out research opportunities for
+				<a href="https://www.physics.utah.edu/undergraduate-program/undergraduate-research/">the Spring/Fall</a>,
+				also check out <a href="https://our.utah.edu/research-scholarship-opportunities/urop/">UROP</a>,
+				and Summer programs like
+				<a href="https://www.physics.utah.edu/surf-opportunities/">SURF</a>
+				and
+				<a href="https://our.utah.edu/research-scholarship-opportunities/spur/">SPUR</a>.
+			</p>
 
-    <p> First-year graduate students will go through research rotations in different groups with the help of an advisory committee. Reach out to me if you are considering a research rotation
-    or a Summer Swigart research project in our group.
+			<p>
+				Undergraduate students from other institutions can explore
+				<a href="https://www.physics.utah.edu/reu-opportunities/">REU opportunities</a>.
+			</p>
 
+			<p>
+				First-year graduate students will go through research rotations in different groups with the help of an advisory committee.
+				Reach out to me if you are considering a research rotation or a Summer Swigart research project in our group.
+			</p>
 		</main>
 		<Footer />
 	</body>
